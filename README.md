@@ -20,5 +20,4 @@ sm-upload ./test.png ./test2.png ./test3.png ...
 ```
 ## in typora
 ![image-20210915163214590](https://i.loli.net/2021/09/15/US3aDPneTrzql9y.png)
- node path              sm-upload
 /usr/local/bin/node  /usr/local/bin/sm-upload
