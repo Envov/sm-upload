@@ -1,6 +1,6 @@
 {
   "name": "sm-upload",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "stable and free uploader on sm.ms",
   "main": "dist/index.js",
   "scripts": {
