@@ -3,6 +3,8 @@ const fetch = require('node-fetch');
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path');
 // eslint-disable-next-line @typescript-eslint/no-var-requires
+const httpsAgent = require("./httpsAgent")
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const fs = require('fs-extra');
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const FormData = require('form-data');
@@ -27,6 +29,7 @@ export const uploadOne = async (inputPath: string): Promise<string|undefined>=>{
     formData.append('smfile', fs.createReadStream(filePath));
     const res: { json: () =>Promise<UploadRes> }=await fetch(`${BASE_URL}/upload`,{
         method: "post",
+        agent: httpsAgent,
         headers:{
             Authorization:user.token
         },
